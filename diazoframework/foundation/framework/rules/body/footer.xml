@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+         xmlns:css="http://namespaces.plone.org/diazo/css"
+         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Footer -->
+  <replace css:content="#portal-footer-wrapper">
+    <footer>
+      <hr />
+      <div class="row">
+          <div class="large-12 columns">
+              <xsl:apply-templates css:select="#portal-footer > *"/>
+          </div>
+          <div class="large-3 columns small-2">
+              <xsl:apply-templates css:select="#portal-colophon a"/>
+          </div>
+          <div class="large-9 columns small-2">
+              <ul class="inline-list right">
+                  <xsl:apply-templates css:select="#portal-siteactions > li"/>
+              </ul>
+          </div>
+      </div>
+    </footer>
+          <script><![CDATA[
+      document.write('<script src="/++framework++foundation/' +
+      ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+      '.js"><\/script>')
+      ]]></script>
+      
+      <script src="/++framework++foundation/js/foundation.min.js"></script>
+      <!--
+      
+      <script src="/++framework++foundation/js/foundation/foundation.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.alerts.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.clearing.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.cookie.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.dropdown.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.forms.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.joyride.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.magellan.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.orbit.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.reveal.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.section.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.tooltips.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.topbar.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.interchange.js"></script>
+      
+      <script src="/++framework++foundation/js/foundation/foundation.placeholder.js"></script>
+      
+      -->
+      
+      <script><![CDATA[
+        $(document).foundation();
+      ]]></script>
+
+    <xsl:apply-templates select="./script"/>
+  </replace>
+
+</rules>
