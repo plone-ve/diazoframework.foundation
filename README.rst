@@ -19,13 +19,16 @@ Requirements
 ============
 
 - From the Plone 4.1.x To the Plone 4.3 latest version (https://plone.org/download)
-- The ``plone.app.theming`` package (*You will need enable it to use this package*)
+- The ``plone.app.theming`` package (*You will need enable it via ``Add-ons`` control 
+  panel to use this package*)
+- The ``diazoframework.plone`` package (*You will need enable it via ``buildout`` 
+  configuration to use this package*)
 
 
 Features
 ========
 
-- Provides the *Zurb Foundation CSS framework* resources.
+- Provides the *Zurb Foundation CSS framework* v4.2.2 resources.
 - Included Diazo rules for the **head** that contains ``base`` CSS styles.
 - Included Diazo rules for the **body** that contains ``columns``, ``content``, ``footer``, 
   ``grid``, ``header``, ``lead`` and ``portlets`` CSS styles.
@@ -33,6 +36,10 @@ Features
 
 Installation
 ============
+
+
+This add-on can be installed has any other add-ons. It's doesn't have any profile, so 
+just add it to your Zope instance, for doing that please the follow steps: 
 
 
 Buildout
